@@ -6,12 +6,12 @@
     <title>Library</title>
   </head>
   <body>
-    <div class="menu">
-      <button id="add-button">add book</button>
-      <input id="author" type="text" />
-      <input id="book-name" type="text" />
-      <input id="pages" type="number" />
-    </div>
+    <form id="form">
+      <button id="add-button" type="submit">add book</button>
+      <input id="author" type="text" required />
+      <input id="book-name" type="text" required />
+      <input id="pages" type="number" required />
+    </form>
     <div id="books-container"></div>
     <script type="module" src="./app/index.js"></script>
   </body>
