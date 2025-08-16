@@ -3,14 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Library</title>
   </head>
   <body>
     <form id="form">
       <button id="add-button" type="submit">add book</button>
-      <input id="author" type="text" required />
-      <input id="book-name" type="text" required />
-      <input id="pages" type="number" required />
+      <input placeholder="Input author name" id="author" type="text" required />
+      <input placeholder="Book name" id="book-name" type="text" required />
+      <input placeholder="Number of pages" id="pages" type="number" required />
     </form>
     <div id="books-container"></div>
     <script type="module" src="./app/index.js"></script>

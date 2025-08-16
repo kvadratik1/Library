@@ -24,7 +24,17 @@ function updateUI() {
 
   for (let i = 0; i < myLibrary.length; i++) {
     const newBookEl = document.createElement("div");
-    newBookEl.textContent = `${myLibrary[i].name}`;
+    newBookEl.textContent = `${myLibrary[i].name}, ${myLibrary[i].author}, ${
+      myLibrary[i].pages
+    } pages, Read: ${myLibrary[i].read ? "Yes" : "No"}`;
+
+    newBookEl.classList.add("book");
+    newBookEl.setAttribute("data-id", myLibrary[i].id);
+
+    newBookEl.addEventListener("click", () => {
+      myLibrary[i].toggleReadState();
+      updateUI();
+    });
 
     booksContainer.appendChild(newBookEl);
   }
