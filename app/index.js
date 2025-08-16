@@ -20,6 +20,8 @@ function addBookToLibrary(name, author, pages, read) {
 }
 
 function updateUI() {
+  booksContainer.innerHTML = "";
+
   for (let i = 0; i < myLibrary.length; i++) {
     const newBookEl = document.createElement("div");
     newBookEl.textContent = `${myLibrary[i].name}`;
