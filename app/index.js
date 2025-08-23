@@ -5,7 +5,7 @@ const myLibrary = [];
 const form = document.getElementById("form");
 
 form.addEventListener("submit", (event) => {
-  event.preventDefault(); // prevent page reload
+  event.preventDefault();
   const author = document.getElementById("author").value;
   const bookName = document.getElementById("book-name").value;
   const pages = document.getElementById("pages").value;
